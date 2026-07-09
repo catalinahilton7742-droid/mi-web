@@ -375,11 +375,20 @@ async function enviarForm(event){
   btn.textContent="Enviando...";
 
   try{
-    const r=await fetch("https://script.google.com/macros/s/AKfycbzb4Ki-FajV-HfbcDNYFkDQ4kxeuiyP-yV8sbmnOCwCJ907W9udR2_jacttQBlq5diXsg/exec",{
-      method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify(datos)
-    });
+  const formData = new FormData();
+
+formData.append("nombre", datos.nombre);
+formData.append("empresa", datos.empresa);
+formData.append("email", datos.email);
+formData.append("telefono", datos.telefono);
+formData.append("servicio", datos.servicio);
+formData.append("mensaje", datos.mensaje);
+
+const r = await fetch("https://script.google.com/macros/s/AKfycbzb4Ki-FajV-HfbcDNYFkDQ4kxeuiyP-yV8sbmnOCwCJ907W9udR2_jacttQBlq5diXsg/exec", {
+    method: "POST",
+    body: formData
+});
+const j = await r.json();
     const j=await r.json();
     if(j.success){
       alert("¡Solicitud enviada correctamente! Te responderemos en menos de 24 horas laborables.");
