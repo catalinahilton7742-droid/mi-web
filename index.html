@@ -384,9 +384,9 @@ const r = await fetch("https://script.google.com/macros/s/AKfycbzb4Ki-FajV-HfbcD
       throw new Error(j.message||"Error al enviar");
     }
   }catch(e){
-    alert("No se pudo enviar la solicitud. Inténtalo de nuevo en unos minutos.");
-    console.error(e);
-  }finally{
+  console.error(e);
+  alert("ERROR:\n\n" + e);
+}finally{
     btn.disabled=false;
     btn.textContent=texto;
   }
