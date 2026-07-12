@@ -282,7 +282,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.35)}
 <span class="opt-icon">🤝</span> Otro servicio
         </div>
 </div>
-<div class="quiz-form"><input name="nombre" placeholder="Nombre de contacto" required="" type="text"/><input name="empresa" placeholder="Empresa" required="" type="text"/><input name="telefono" placeholder="Teléfono" required="" type="tel"/><input name="email" placeholder="Correo electrónico" required="" type="email"/><textarea name="mensaje" placeholder="Describe brevemente tu necesidad (zona, urgencia, cantidad de personal…)" required=""></textarea><button class="quiz-submit" onclick="enviarForm(event)" type="button">📨 Enviar solicitud de presupuesto</button></div>
+<form class="quiz-form" onsubmit="enviarForm(event)"><input name="nombre" placeholder="Nombre de contacto" required="" type="text"/><input name="empresa" placeholder="Empresa" required="" type="text"/><input name="telefono" placeholder="Teléfono" required="" type="tel"/><input name="email" placeholder="Correo electrónico" required="" type="email"/><textarea name="mensaje" placeholder="Describe brevemente tu necesidad (zona, urgencia, cantidad de personal…)" required=""></textarea><button class="quiz-submit" onclick="enviarForm(event)" type="button">📨 Enviar solicitud de presupuesto</button></div>
 <div class="badge-response">
 <span>⏱️</span>
 <span>Te responderemos en menos de 24 horas laborables</span>
@@ -334,7 +334,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.35)}
 <a href="#">Aviso legal</a>
 <a href="#">Privacidad</a>
 <a href="#contacto">Contacto</a>
-</div>
+</form>
 </footer>
 <script>
 function toggleOpt(el){
