@@ -289,11 +289,12 @@ footer p{font-size:11px;color:rgba(255,255,255,.35)}
         </div>
       </div>
       <div class="quiz-form">
-        <input type="text" placeholder="Tu nombre y empresa">
-        <input type="tel" placeholder="Teléfono de contacto">
-        <input type="email" placeholder="Correo electrónico">
-        <textarea placeholder="Describe brevemente tu necesidad (zona, urgencia, cantidad de personal…)"></textarea>
-        <button class="quiz-submit" onclick="enviarForm()">📨 Enviar solicitud de presupuesto</button>
+       <button
+type="button"
+class="quiz-submit"
+onclick="enviarForm(event)">
+📨 Enviar solicitud de presupuesto
+</button>
       </div>
       <div class="badge-response">
         <span>⏱️</span>
